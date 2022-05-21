@@ -1,5 +1,4 @@
-#For QSSI, we build only the system image. Here we explicitly set the images
-#we build so there is no confusion.
+# When using QSSI trees, we only wish to build the system image so the following flags will set it to only build the system image.
 PRODUCT_BUILD_SYSTEM_IMAGE := true
 PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
 PRODUCT_BUILD_VENDOR_IMAGE := false
@@ -8,8 +7,9 @@ PRODUCT_BUILD_ODM_IMAGE := false
 PRODUCT_BUILD_CACHE_IMAGE := false
 PRODUCT_BUILD_USERDATA_IMAGE := false
 
-#Also, there is no need to build an OTA package as this will be done later
-#when we combine this system build with the non-system images.
+# The following flag tells the build system to skip
+# creating an OTA package as this build is intended
+# to be used as a GSI (Generic System Image)
 TARGET_SKIP_OTA_PACKAGE := true
 
 # Enable AVB 2.0
@@ -102,9 +102,8 @@ PRODUCT_PROPERTY_OVERRIDES  += \
 
 PRODUCT_NAME := $(VENDOR_QTI_DEVICE)
 PRODUCT_DEVICE := $(VENDOR_QTI_DEVICE)
-PRODUCT_BRAND := qti
-PRODUCT_MODEL := qssi system image for arm64
-
+PRODUCT_BRAND := QTI
+PRODUCT_MODEL := QSSI ARM64 system
 #Initial bringup flags
 TARGET_USES_AOSP := false
 TARGET_USES_AOSP_FOR_AUDIO := false
