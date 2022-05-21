@@ -1,2 +1,2 @@
 # Qualcomm QSSI Device-trees
-These are the device trees for Qualcomm QSSI, I haven't checked these yet but they're most likely AIO trees like the rest I've seen lately.
+This is a repository which contains Qualcomm's QSSI trees, they're proprietary or at least used to, these device trees are AIO trees and they're Android 10 (Q) device trees. 
